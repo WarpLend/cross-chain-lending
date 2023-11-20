@@ -1,0 +1,64 @@
+{
+	"deploy": {
+		"VM:-": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"main:1": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"ropsten:3": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"rinkeby:4": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"kovan:42": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"goerli:5": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		},
+		"Custom": {
+			"linkReferences": {},
+			"autoDeployLib": true
+		}
+	},
+	"data": {
+		"bytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"linkReferences": {},
+			"object": "6080604052348015600e575f80fd5b50603e80601a5f395ff3fe60806040525f80fdfea26469706673582212205093eb22891d1a362df9a82903702fa4910bbf271770fdc79ff356be95da7fe064736f6c63430008170033",
+			"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xE JUMPI PUSH0 DUP1 REVERT JUMPDEST POP PUSH1 0x3E DUP1 PUSH1 0x1A PUSH0 CODECOPY PUSH0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE PUSH0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 POP SWAP4 0xEB 0x22 DUP10 SAR BYTE CALLDATASIZE 0x2D 0xF9 0xA8 0x29 SUB PUSH17 0x2FA4910BBF271770FDC79FF356BE95DA7F 0xE0 PUSH5 0x736F6C6343 STOP ADDMOD OR STOP CALLER ",
+			"sourceMap": "143:743:0:-:0;;;;;;;;;;;;;;;;;;;"
+		},
+		"deployedBytecode": {
+			"functionDebugData": {},
+			"generatedSources": [],
+			"immutableReferences": {},
+			"linkReferences": {},
+			"object": "60806040525f80fdfea26469706673582212205093eb22891d1a362df9a82903702fa4910bbf271770fdc79ff356be95da7fe064736f6c63430008170033",
+			"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 POP SWAP4 0xEB 0x22 DUP10 SAR BYTE CALLDATASIZE 0x2D 0xF9 0xA8 0x29 SUB PUSH17 0x2FA4910BBF271770FDC79FF356BE95DA7F 0xE0 PUSH5 0x736F6C6343 STOP ADDMOD OR STOP CALLER ",
+			"sourceMap": "143:743:0:-:0;;;;;"
+		},
+		"gasEstimates": {
+			"creation": {
+				"codeDepositCost": "12400",
+				"executionCost": "64",
+				"totalCost": "12464"
+			},
+			"internal": {
+				"decodeActionPayload(bytes memory)": "infinite",
+				"encodeActionPayload(struct HubSpokeStructs.ActionPayload memory)": "infinite"
+			}
+		},
+		"methodIdentifiers": {}
+	},
+	"abi": []
+}

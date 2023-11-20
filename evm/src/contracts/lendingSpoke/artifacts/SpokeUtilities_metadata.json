@@ -1,0 +1,173 @@
+{
+	"compiler": {
+		"version": "0.8.23+commit.f704f362"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "chainId",
+				"outputs": [
+					{
+						"internalType": "uint16",
+						"name": "",
+						"type": "uint16"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "tokenBridge",
+				"outputs": [
+					{
+						"internalType": "contract ITokenBridge",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "tokenBridgeAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"example-2/evm/src/contracts/lendingSpoke/SpokeUtilities.sol": "SpokeUtilities"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0xc6a8ff0ea489379b61faa647490411b80102578440ab9d84e9a957cc12164e70",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0ea104e577e63faea3b69c415637e99e755dcbf64c5833d7140c35a714d6d90c",
+				"dweb:/ipfs/Qmau6x4Ns9XdyynRCNNp3RhLqijJjFm7z5fyZazfYFGYdq"
+			]
+		},
+		"@openzeppelin/contracts/token/ERC20/extensions/IERC20Permit.sol": {
+			"keccak256": "0x6008dabfe393240d73d7dd7688033f72740d570aa422254d29a7dce8568f3aff",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f5196ec75139918c6c7bb4251b36395e668f1fa6d206beba7e7520e74913940d",
+				"dweb:/ipfs/QmSyqjksXxmm2mCG6qRd1yuwLykypkSVBbnBnGqJRcuJMi"
+			]
+		},
+		"@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol": {
+			"keccak256": "0x37bb49513c49c87c4642a891b13b63571bc87013dde806617aa1efb54605f386",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b3036b3a83b7c48f96641f2a9002b9f2dcb6a5958dd670894ada21ae8229b3d0",
+				"dweb:/ipfs/QmUNfSBdoVtjhETaUJCYcaC7pTMgbhht926tJ2uXJbiVd3"
+			]
+		},
+		"@openzeppelin/contracts/utils/Address.sol": {
+			"keccak256": "0xaf28a975a78550e45f65e559a3ad6a5ad43b9b8a37366999abd1b7084eb70721",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b7bd24e224f67f65bfadf85dc2929fa965456bb2415478bd0125471b5ce35245",
+				"dweb:/ipfs/QmRaydGr8BTHs1kvaZfsNU69pKzUAGFrvABn1KiRSbE51y"
+			]
+		},
+		"example-2/evm/src/contracts/HubSpokeStructs.sol": {
+			"keccak256": "0x24302b1f2d165f5b53d3bedd11aa1c367d30458bb93e0a34a79a939e753fd7dc",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://11d40dd261195ea6fe19f0aa56d2aad5040cabd000041b250d3419985e9d6a9e",
+				"dweb:/ipfs/Qmd59wjnwsyt2ave7vYQZQdPxk2AGHAvWVhQAUGAgxPMJ6"
+			]
+		},
+		"example-2/evm/src/contracts/lendingSpoke/SpokeGetters.sol": {
+			"keccak256": "0xb997dc0290213b1a75e59c29dd4a2528d203bc6c2f511db26e07c9e7e4795d4b",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://fe39567ca05eca938a1a173c036a348bc0abde7af35227d5fa38a7e173813166",
+				"dweb:/ipfs/QmPU7NnzM1MLPHFH9rpxT9PU8Xn3kpw9beyaxfbi4hcf3V"
+			]
+		},
+		"example-2/evm/src/contracts/lendingSpoke/SpokeSetters.sol": {
+			"keccak256": "0x9ac8f289c14b91bfa37e3e4e52de2b7b045ac8b18881600e94f9177e7339180a",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://775105aa5cc5315e82d9b7ce6c9ad1c52bf5fb0659ec6f03b3f76339f1ffed78",
+				"dweb:/ipfs/QmfWXxyrasDjtXLD1fAvytQe6tQL5cJGsqQUUxhdS3orFu"
+			]
+		},
+		"example-2/evm/src/contracts/lendingSpoke/SpokeState.sol": {
+			"keccak256": "0xf80dacbb4d6dcdaf5e87cd345ce29cbbcd8de072a0afc52893a2afb62eee3e79",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://da38f2e7895e5a2cd7434bb9379c8e302e2d1332469e0981273acbad59613802",
+				"dweb:/ipfs/QmYmEgB535PXwEywshC7PdbgxiT2Av1MstdUnttHWgq4SM"
+			]
+		},
+		"example-2/evm/src/contracts/lendingSpoke/SpokeUtilities.sol": {
+			"keccak256": "0x28456218c7446312a4c0e94a6262751885d52fff0f84053afb68437b048b072f",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://588616d0c5273159b65efe2d50f0d9d657903cdc9cee5d4e04c7d8406e18bf7b",
+				"dweb:/ipfs/QmenVkBzENXjWnGmeTC1p6J7NwzhitbYhhsSaXE5e4grfY"
+			]
+		},
+		"example-2/evm/src/interfaces/ITokenBridge.sol": {
+			"keccak256": "0x4c464b3e06d31406bd5c777cf8cc985a2f61ce363b6b8f1471c6b5c5da85bf17",
+			"license": "Apache 2",
+			"urls": [
+				"bzz-raw://acb5d5fc309b2cb1db62e1a8b9b3a1cb30b66f6b92b39477beb7a6bc61e0a4ae",
+				"dweb:/ipfs/QmakrPQL2o7uVBYenB4wf1rth1JwKRoo7rJdXx7EPKczva"
+			]
+		},
+		"example-2/evm/src/interfaces/IWETH.sol": {
+			"keccak256": "0xecabfd3b5626aaac6da21213b966a2aac8380f4fec739f84ffe08b29006d134e",
+			"license": "Apache 2",
+			"urls": [
+				"bzz-raw://912a0accde3c2d18f8d268726ec16b9dfa0f24522e66e7d88c9ed368f3db7d60",
+				"dweb:/ipfs/Qmf2V8YhAXRSYVFKuCeCViYAnnWtPi9GTL7w4zRPtMvGTT"
+			]
+		},
+		"example-2/evm/src/interfaces/IWormhole.sol": {
+			"keccak256": "0x8547d11f760ad248fe6620e146ed7756654f26b769f9deebdbb84d534144e216",
+			"license": "Apache 2",
+			"urls": [
+				"bzz-raw://5ac7aae1f4c9fbf06056856e854ba7ab14a5c7a487618f0a5a752e25d8d36563",
+				"dweb:/ipfs/QmNf2aFrp4tgEGd1AvaSJTMHb72RVgw1TBfvNp5tQ2TZH8"
+			]
+		}
+	},
+	"version": 1
+}

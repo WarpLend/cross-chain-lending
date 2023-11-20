@@ -1,0 +1,61 @@
+{
+	"compiler": {
+		"version": "0.8.23+commit.f704f362"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"example-2/evm/src/contracts/HubSpokeMessages.sol": "HubSpokeMessages"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"example-2/evm/src/contracts/HubSpokeMessages.sol": {
+			"keccak256": "0xbd7eddd402e84ececac48891645f176cd5c7c1e900ea6c10535d79f5df711dfd",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://b9f854584331c92ceedab8a9164a2d57ebde3aabbf081fd82c2862bddb978bf2",
+				"dweb:/ipfs/QmTnJyxqnSq7n9o2FgGfV1RecQ2HTW8vJfPcCS9Qwig1No"
+			]
+		},
+		"example-2/evm/src/contracts/HubSpokeStructs.sol": {
+			"keccak256": "0x24302b1f2d165f5b53d3bedd11aa1c367d30458bb93e0a34a79a939e753fd7dc",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://11d40dd261195ea6fe19f0aa56d2aad5040cabd000041b250d3419985e9d6a9e",
+				"dweb:/ipfs/Qmd59wjnwsyt2ave7vYQZQdPxk2AGHAvWVhQAUGAgxPMJ6"
+			]
+		},
+		"example-2/evm/src/libraries/external/BytesLib.sol": {
+			"keccak256": "0xf75784dfc94ea43668eb195d5690a1dde1b6eda62017e73a3899721583821d29",
+			"license": "Unlicense",
+			"urls": [
+				"bzz-raw://ca16cef8b94f3ac75d376489a668618f6c4595a906b939d674a883f4bf426014",
+				"dweb:/ipfs/QmceGU7qhyFLSejaj6i4dEtMzXDCSF3aYDtW1UeKjXQaRn"
+			]
+		}
+	},
+	"version": 1
+}

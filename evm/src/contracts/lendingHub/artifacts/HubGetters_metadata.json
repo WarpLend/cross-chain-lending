@@ -1,0 +1,392 @@
+{
+	"compiler": {
+		"version": "0.8.23+commit.f704f362"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					}
+				],
+				"name": "OwnableInvalidOwner",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "OwnableUnauthorizedAccount",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "assetAddress",
+						"type": "address"
+					}
+				],
+				"name": "getAssetInfo",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "collateralizationRatioDeposit",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "collateralizationRatioBorrow",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bytes32",
+								"name": "pythId",
+								"type": "bytes32"
+							},
+							{
+								"internalType": "uint8",
+								"name": "decimals",
+								"type": "uint8"
+							},
+							{
+								"components": [
+									{
+										"internalType": "uint64",
+										"name": "ratePrecision",
+										"type": "uint64"
+									},
+									{
+										"internalType": "uint256[]",
+										"name": "kinks",
+										"type": "uint256[]"
+									},
+									{
+										"internalType": "uint256[]",
+										"name": "rates",
+										"type": "uint256[]"
+									},
+									{
+										"internalType": "uint256",
+										"name": "reserveFactor",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "reservePrecision",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct HubSpokeStructs.PiecewiseInterestRateModel",
+								"name": "interestRateModel",
+								"type": "tuple"
+							},
+							{
+								"internalType": "bool",
+								"name": "exists",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct HubSpokeStructs.AssetInfo",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getInterestAccrualIndexPrecision",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "assetAddress",
+						"type": "address"
+					}
+				],
+				"name": "getInterestAccrualIndices",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "deposited",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "borrowed",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct HubSpokeStructs.AccrualIndices",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "renounceOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"errors": {
+				"OwnableInvalidOwner(address)": [
+					{
+						"details": "The owner is not a valid owner account. (eg. `address(0)`)"
+					}
+				],
+				"OwnableUnauthorizedAccount(address)": [
+					{
+						"details": "The caller account is not authorized to perform an operation."
+					}
+				]
+			},
+			"kind": "dev",
+			"methods": {
+				"owner()": {
+					"details": "Returns the address of the current owner."
+				},
+				"renounceOwnership()": {
+					"details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby disabling any functionality that is only available to the owner."
+				},
+				"transferOwnership(address)": {
+					"details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"example-2/evm/src/contracts/lendingHub/HubGetters.sol": "HubGetters"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/access/Ownable.sol": {
+			"keccak256": "0xff6d0bb2e285473e5311d9d3caacb525ae3538a80758c10649a4d61029b017bb",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8ed324d3920bb545059d66ab97d43e43ee85fd3bd52e03e401f020afb0b120f6",
+				"dweb:/ipfs/QmfEckWLmZkDDcoWrkEvMWhms66xwTLff9DDhegYpvHo1a"
+			]
+		},
+		"@openzeppelin/contracts/token/ERC20/IERC20.sol": {
+			"keccak256": "0xc6a8ff0ea489379b61faa647490411b80102578440ab9d84e9a957cc12164e70",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0ea104e577e63faea3b69c415637e99e755dcbf64c5833d7140c35a714d6d90c",
+				"dweb:/ipfs/Qmau6x4Ns9XdyynRCNNp3RhLqijJjFm7z5fyZazfYFGYdq"
+			]
+		},
+		"@openzeppelin/contracts/utils/Context.sol": {
+			"keccak256": "0x75a4ee64c68dbd5f38bddd06e664a64c8271b4caa554fb6f0607dfd672bb4bf3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0c4e6cb30d3601e2f7af5af09e265508147cb275a8dcd99d6f7363645cc56867",
+				"dweb:/ipfs/QmNgFkoXNWoUbAyw71rr1sKQ95Rj2GfvYiWg79xEYDn2NY"
+			]
+		},
+		"@pythnetwork/pyth-sdk-solidity/AbstractPyth.sol": {
+			"keccak256": "0x928ee08b716ee1d45e463224da886a411f9d9677e75c621079c1c1fb58f17b70",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://c9aea1027d4fe2907186310d49fb3ff4cd5ef64aef0ff33fc61ccb4d99dd655a",
+				"dweb:/ipfs/QmZZMrCrJLGDHsysKBZtFcHM4wN2TzVASyUyB9ZjGbFZKn"
+			]
+		},
+		"@pythnetwork/pyth-sdk-solidity/IPyth.sol": {
+			"keccak256": "0x9267fcf4f641a180c57cec08d5a50512430e218918643db94a8d8ef99ec60ed0",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://5ba1b051e412fc917323116a712792025d3bdf0aa76fbf7218ef98b605eabf46",
+				"dweb:/ipfs/QmX4tJMartPLy6gEDWYnKoJZMWLcGpw9HUVfbwXPHTaTaP"
+			]
+		},
+		"@pythnetwork/pyth-sdk-solidity/IPythEvents.sol": {
+			"keccak256": "0x048a35526c2e77d107d43ba336f1dcf31f64cef25ba429ae1f7a0fbc11c23320",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://b75be4c3643b22305995aba71fc92146dbf51fa82d2f9728c515d7749b32dca3",
+				"dweb:/ipfs/QmRby4XA9jJQGhxoJ16BTUDuU7BzLFfadbfTgBiQsDgNyZ"
+			]
+		},
+		"@pythnetwork/pyth-sdk-solidity/MockPyth.sol": {
+			"keccak256": "0xab091aaa2551201b37fe6f417db60b76e37caa540b0b82ad5df93721c8641412",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://9d3be6b795dfd0bcda4d6f52f876e8d5f8f9dbdc98be3a5ebd7aec057fa51959",
+				"dweb:/ipfs/QmXarJpfPzjPLSakDzqqPJ7rHdqpu4J17PadmzZkB6hnWU"
+			]
+		},
+		"@pythnetwork/pyth-sdk-solidity/PythErrors.sol": {
+			"keccak256": "0xcd288c1da7de4223e6ecb36335385c5e7bfcbac0def035d8d9253db62b703112",
+			"license": "Apache 2",
+			"urls": [
+				"bzz-raw://030a179c0ba04e71bf48d8d75acd180fb769d448776ec5fdbd32ed2b381dc7d3",
+				"dweb:/ipfs/QmWZALnKedi6Jq8evBxVJMeY4XMrSQUpihJ2MoSGLZSnEA"
+			]
+		},
+		"@pythnetwork/pyth-sdk-solidity/PythStructs.sol": {
+			"keccak256": "0xade221177dda98ebd194c363f264ceea125bde0e6a7a72f7b54da3ac60316894",
+			"license": "Apache-2.0",
+			"urls": [
+				"bzz-raw://a404dbbc64183995326c345cae27601d37c783b3d9030c8dc0ab4943fa2bf1da",
+				"dweb:/ipfs/QmfNFesQffYisafmJFbKHxVFSD8fY49X1z9f8N7qtfW8AX"
+			]
+		},
+		"example-2/evm/src/contracts/HubSpokeStructs.sol": {
+			"keccak256": "0x24302b1f2d165f5b53d3bedd11aa1c367d30458bb93e0a34a79a939e753fd7dc",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://11d40dd261195ea6fe19f0aa56d2aad5040cabd000041b250d3419985e9d6a9e",
+				"dweb:/ipfs/Qmd59wjnwsyt2ave7vYQZQdPxk2AGHAvWVhQAUGAgxPMJ6"
+			]
+		},
+		"example-2/evm/src/contracts/lendingHub/HubGetters.sol": {
+			"keccak256": "0xdc95ad283ad88a59d02e8e9b431c8ab6722f09a993381a8f9e357b6ad5c6317d",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://83da2acc7f1b72011ab9dad097d983e71719f4c6129648cf5a363688d73ac3ad",
+				"dweb:/ipfs/QmVGHyaUhxRq8ZP4kqUxrrsnXe8bHN3AgGMysjQ8QiQnqE"
+			]
+		},
+		"example-2/evm/src/contracts/lendingHub/HubState.sol": {
+			"keccak256": "0x7602f864c543570c2c21b42d1f027ae977ee9a36432c689e332dd9b424be68a9",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://70d64ac181a3ebe79f6182f9623f14d8c29922e2f7fdecef5ffd83a4d178cb1b",
+				"dweb:/ipfs/QmQ2Rn5SYHczEA6j23Lx9XGF7RVKMndJGAFZcUXN7Y8SNU"
+			]
+		},
+		"example-2/evm/src/interfaces/IMockPyth.sol": {
+			"keccak256": "0xbd37338655f3e255f6ebd691549a27053a15cbdd9de4406cf538a197e3638131",
+			"license": "Apache 2",
+			"urls": [
+				"bzz-raw://f7689621f9031bc01731ab49f8bdae82f95a66245b2b2bfb4b7256272e36b0ad",
+				"dweb:/ipfs/QmNXaxmbwNKtvajgDnsk1Fmg2NZW4ML4k33pTPaGXP9h8Y"
+			]
+		},
+		"example-2/evm/src/interfaces/ITokenBridge.sol": {
+			"keccak256": "0x4c464b3e06d31406bd5c777cf8cc985a2f61ce363b6b8f1471c6b5c5da85bf17",
+			"license": "Apache 2",
+			"urls": [
+				"bzz-raw://acb5d5fc309b2cb1db62e1a8b9b3a1cb30b66f6b92b39477beb7a6bc61e0a4ae",
+				"dweb:/ipfs/QmakrPQL2o7uVBYenB4wf1rth1JwKRoo7rJdXx7EPKczva"
+			]
+		},
+		"example-2/evm/src/interfaces/IWETH.sol": {
+			"keccak256": "0xecabfd3b5626aaac6da21213b966a2aac8380f4fec739f84ffe08b29006d134e",
+			"license": "Apache 2",
+			"urls": [
+				"bzz-raw://912a0accde3c2d18f8d268726ec16b9dfa0f24522e66e7d88c9ed368f3db7d60",
+				"dweb:/ipfs/Qmf2V8YhAXRSYVFKuCeCViYAnnWtPi9GTL7w4zRPtMvGTT"
+			]
+		},
+		"example-2/evm/src/interfaces/IWormhole.sol": {
+			"keccak256": "0x8547d11f760ad248fe6620e146ed7756654f26b769f9deebdbb84d534144e216",
+			"license": "Apache 2",
+			"urls": [
+				"bzz-raw://5ac7aae1f4c9fbf06056856e854ba7ab14a5c7a487618f0a5a752e25d8d36563",
+				"dweb:/ipfs/QmNf2aFrp4tgEGd1AvaSJTMHb72RVgw1TBfvNp5tQ2TZH8"
+			]
+		},
+		"forge-std/console.sol": {
+			"keccak256": "0x91d5413c2434ca58fd278b6e1e79fd98d10c83931cc2596a6038eee4daeb34ba",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://91ccea707361e48b9b7a161fe81f496b9932bc471e9c4e4e1e9c283f2453cc70",
+				"dweb:/ipfs/QmcB66sZhQ6Kz7MUHcLE78YXRUZxoZnnxZjN6yATsbB2ec"
+			]
+		}
+	},
+	"version": 1
+}
