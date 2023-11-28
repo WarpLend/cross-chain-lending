@@ -27,6 +27,7 @@ Note that there is currently no cross-chain relayer infrastructure in place arou
 # Cross Chain Borrow Lend Hub and Spoke Docs
 
 We propose a design and reference example (EVM only) for a Cross-chain borrow lend protocol, using a Hub and Spoke model.
+( Need to make sure which chains pyth supports) 
 
 Users can deposit assets into the protocol. They can also borrow assets from the protocol, using the assets that they have deposited as collateral. The protocol keeps track of the amount of each asset a user has deposited, and the amount of each asset a user has borrowed. We will often refer to a user’s deposited and borrowed assets in the protocol as their ‘vault’.
 
