@@ -14,7 +14,7 @@ contract DeployHub is Script {
         // Parameters for the Hub constructor
         address wormhole = 0x0CBE91CF822c73C2315FB05100C2F714765d5c20;
         address tokenBridge = 0x377D55a7928c046E18eEbb61977e714d2a76472a;
-        uint8 consistencyLevel = 1;
+        uint8 consistencyLevel = 200;
         address pythAddress = 0xff1a0f4744e8582DF1aE09D5611b887B6a12925C;
         uint8 oracleMode = 0;
         uint64 priceStandardDeviations = 424;
