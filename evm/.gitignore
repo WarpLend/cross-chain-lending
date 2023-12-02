@@ -1,5 +1,6 @@
 cache
 lib
+.env
 node_modules
 out
 venus-protocol
