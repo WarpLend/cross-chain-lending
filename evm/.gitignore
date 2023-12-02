@@ -2,6 +2,7 @@ cache
 lib
 node_modules
 out
+.env
 venus-protocol
 wormhole
 ../../.vscode
