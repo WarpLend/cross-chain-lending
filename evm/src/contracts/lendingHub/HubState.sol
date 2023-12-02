@@ -67,8 +67,9 @@ contract HubStorage is HubSpokeStructs {
     }
 }
 
- contract HubState is Ownable {
-  HubStorage.State  _state;
-
-    constructor() Ownable(address(0)) {}
+contract HubState is Ownable {
+    HubStorage.State _state;
 }
+
+
+

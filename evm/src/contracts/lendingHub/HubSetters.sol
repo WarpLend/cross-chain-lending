@@ -147,7 +147,7 @@ contract HubSetters is HubSpokeStructs, HubState, HubGetters {
         uint64 publishTime
     ) public onlyOwner {
         bytes memory priceFeedData =
-            _state.provider.mockPyth.createPriceFeedUpdateData(id, price, conf, expo, emaPrice, emaConf, publishTime,publishTime);
+            _state.provider.mockPyth.createPriceFeedUpdateData(id, price, conf, expo, emaPrice, emaConf, publishTime);
 
         bytes[] memory updateData = new bytes[](1);
         updateData[0] = priceFeedData;
