@@ -1,12 +1,13 @@
 [profile.default]
+optimizer = true
+optimizer_runs = 20_000
 src = 'src'
 out = 'out'
 libs = ['lib']
+viaIR = true
 
-# See more config options https://github.com/foundry-rs/foundry/tree/master/config
+[rpc_endpoints]
+mumbai = "https://polygon-mumbai.g.alchemy.com/v2/i7oRPAyOsL-UuAKRW5WfKlXeGqnF4u1E"
 
-
-remappings = [
-    "@openzeppelin/=node_modules/@openzeppelin/",
-    "@pythnetwork/=node_modules/@pythnetwork/"
-]
+# Reference to remappings.txt
+remappings = "remappings.txt"

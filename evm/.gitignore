@@ -3,6 +3,8 @@ lib
 .env
 node_modules
 out
+.env
 venus-protocol
 wormhole
 ../../.vscode
+broadcast
