@@ -40,7 +40,7 @@ contract DeployHub is Script {
             collateralizationRatioPrecision
         );
 
-        console.log("Hub deployed at:", address(hub));
+        console.log("Spoke deployed at:", address(hub));
 
         vm.stopBroadcast();
     }
