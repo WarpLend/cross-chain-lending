@@ -1,14 +1,15 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.0;
 
-import  "../evm/lib/forge-std/src/Script.sol"; 
+import "forge-std/Script.sol";
 
-import {Hub} from "../evm/src/contracts/lendingHub/Hub.sol"; // Update the import path according to your project structure;
+import '../src/contracts/lendingHub/Hub.sol'; // Update the import path according to your project structure;
 
 
 contract DeployHub is Script {
     function run() external {
-        vm.startBroadcast();
+        uint256 deployerPrivateKey = vm.envUint("PRIVATE_KEY");
+        vm.startBroadcast(deployerPrivateKey);
 
         // Parameters for the Hub constructor
         address wormhole = 0x88505117CA88e7dd2eC6EA1E13f0948db2D50D56;
