@@ -16,7 +16,7 @@ contract DeployHub is Script {
         address tokenBridge = 0x377D55a7928c046E18eEbb61977e714d2a76472a;
         uint8 consistencyLevel = 200;
         address pythAddress = 0xff1a0f4744e8582DF1aE09D5611b887B6a12925C;
-        uint8 oracleMode = 0;
+        uint8 oracleMode = 1;
         uint64 priceStandardDeviations = 424;
         uint64 priceStandardDeviationsPrecision = 10**2;
         uint256 maxLiquidationBonus = 10**6;
@@ -40,7 +40,7 @@ contract DeployHub is Script {
             collateralizationRatioPrecision
         );
 
-        console.log("Spoke deployed at:", address(hub));
+        console.log("Hub deployed at:", address(hub));
 
         vm.stopBroadcast();
     }
