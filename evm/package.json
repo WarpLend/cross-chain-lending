@@ -8,7 +8,10 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deployHub": "forge script script/DeployHub.s.sol:DeployHub --rpc-url mumbai --broadcast --verify -vvvv",
+    "deploySpokeAlfajores": "forge script script/deploySpokeAlfajores.s.sol:DeploySpoke --rpc-url alfajores --broadcast --verify -vvvv",
+    "deploySpokeMumbai": "forge script script/deploySpokeMumbai.s.sol:DeploySpoke --rpc-url mumbai --broadcast --verify -vvvv"
   },
   "author": "",
   "license": "ISC",
