@@ -17,6 +17,9 @@ contract HubWormholeUtilities is HubGetters, HubSetters {
         internal
         returns (uint64 sequence)
     {
+        require(receiver != address(0));
+        require(amount > 0);
+        require(assetAddress != address(0));
         // SafeERC20.safeApprove(IERC20(assetAddress), tokenBridgeAddress(), amount);
         sequence = tokenBridge().transferTokens(
             assetAddress, amount, recipientChain, bytes32(uint256(uint160(receiver))), 0, 0
@@ -102,3 +105,4 @@ contract HubWormholeUtilities is HubGetters, HubSetters {
         return amount;
     }
 }
+
