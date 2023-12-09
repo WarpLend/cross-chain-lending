@@ -62,8 +62,7 @@ contract Hub is HubSpokeStructs, HubSpokeMessages, HubGetters, HubSetters, HubWo
         uint256 reservePrecision,
         bytes32 pythId
     ) public onlyOwner {
-        AssetInfo memory registeredInfo = getAssetInfo(assetAddress);
-        require(!registeredInfo.exists, "Asset already registered");
+        require(!getAssetInfo(assetAddress).exists, "Asset already registered");
 
         allowAsset(assetAddress);
 
@@ -75,11 +74,7 @@ contract Hub is HubSpokeStructs, HubSpokeMessages, HubGetters, HubSetters, HubWo
             reservePrecision: reservePrecision
         });
 
-        (, bytes memory queriedDecimals) = assetAddress.staticcall(abi.encodeWithSignature("decimals()"));
-        uint8 decimals = abi.decode(queriedDecimals, (uint8));
-        if (decimals > 18) {
-            decimals = 18;
-        }
+        uint8 decimals = getDecimals(assetAddress);
         require(ratePrecision <= 10 ** 6);
         require(reservePrecision <= 10 ** 6);
 
@@ -93,32 +88,37 @@ contract Hub is HubSpokeStructs, HubSpokeMessages, HubGetters, HubSetters, HubWo
         });
 
         registerAssetInfo(assetAddress, info);
-
         setLastActivityBlockTimestamp(assetAddress, block.timestamp);
     }
 
-
-
+    // Registers a new spoke contract for a given chain ID.
+    // Only callable by the contract owner.
     function registerSpoke(uint16 chainId, address spokeContractAddress) public onlyOwner {
+        require(spokeContractAddress != address(0), "Invalid spoke contract address");
         registerSpokeContract(chainId, spokeContractAddress);
     }
 
-
+    // Completes a deposit action. The encoded message should contain the necessary information for the deposit.
     function completeDeposit(bytes memory encodedMessage) public {
+        require(encodedMessage.length > 0, "Encoded message cannot be empty");
         completeAction(encodedMessage, true);
     }
 
- 
+    // Completes a withdraw action. The encoded message should contain the necessary information for the withdrawal.
     function completeWithdraw(bytes memory encodedMessage) public {
+        require(encodedMessage.length > 0, "Encoded message cannot be empty");
         completeAction(encodedMessage, false);
     }
 
+    // Completes a borrow action. The encoded message should contain the necessary information for the borrow.
     function completeBorrow(bytes memory encodedMessage) public {
+        require(encodedMessage.length > 0, "Encoded message cannot be empty");
         completeAction(encodedMessage, false);
     }
 
-
+    // Completes a repay action. The encoded message should contain the necessary information for the repayment.
     function completeRepay(bytes memory encodedMessage) public {
+        require(encodedMessage.length > 0, "Encoded message cannot be empty");
         completeAction(encodedMessage, true);
     }
 
